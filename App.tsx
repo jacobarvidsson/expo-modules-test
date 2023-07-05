@@ -5,8 +5,9 @@
  * @format
  */
 
-import React from 'react';
+import Constants from 'expo-constants';
 import type {PropsWithChildren} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -24,10 +25,13 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {hello} from './modules/jacobs-module';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
+console.log(Constants.systemFonts);
 
 function Section({children, title}: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -62,6 +66,7 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  console.log('got here', hello());
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
