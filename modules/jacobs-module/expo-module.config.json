@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "android", "web"],
+  "ios": {
+    "modules": ["JacobsModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.jacobsmodule.JacobsModule"]
+  }
+}
